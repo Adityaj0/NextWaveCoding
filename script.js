@@ -13,7 +13,7 @@ document.getElementById('join-form').addEventListener('submit', function(e) {
     Email.send({
         SecureToken: "YourSecureTokenHere", // Replace with your secure token from smtpjs.com
         To: 'adityaj0714@gmail.com',
-        From: "no-reply@yourdomain.com", // Use a fixed "from" email address
+        From: "adityaj0714@gmail.com", // Use a fixed "from" email address
         Subject: "New Join Us Form Submission",
         Body: `
             <strong>First Name:</strong> ${firstName}<br>
