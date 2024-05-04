@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextWave Coding</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
     <header>
@@ -78,13 +79,13 @@
                     <p>Co-Founder and CTO</p>
                 </div>
                 <div class="team-member">
-                    <img src="placeholder.jpg" alt="Co-Founder 3">
-                    <h3>Martin Hernandez</h3>
+                    <img src="placeholder.jpg" alt="Chief Financial Officer">
+                    <h3>Martin Hernandaz</h3>
                     <p>Chief Financial Officer</p>
                 </div>
                 <div class="team-member">
                     <img src="placeholder.jpg" alt="Outreach Director">
-                    <h3>Adity Jadhav</h3>
+                    <h3>Aditya Jadhav</h3>
                     <p>Outreach Director</p>
                 </div>
             </div>
@@ -95,33 +96,47 @@
             <p>If you have any questions or need further information, please contact us at:</p>
             <a href="mailto:nextwavecodeacademy@gmail.com">nextwavecodeacademy@gmail.com</a>
         </section>
-
-        <!-- Admin Section -->
-        <section id="admin" style="display:none;">
-            <h2>Admin Section</h2>
-            <p>Responses from Users:</p>
-            <div id="responses">
-                <!-- User responses will be displayed here -->
-            </div>
-        </section>
-
-        <button onclick="promptPassword()">Admin Login</button>
     </main>
 
     <footer>
         <p>&copy; 2023 NextWave Coding</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-        function promptPassword() {
-            var password = prompt("Please enter the admin password:");
-            if (password === "monkiesareamazing") {
-                document.getElementById('admin').style.display = 'block';
-            } else {
-                alert("Incorrect password!");
-            }
-        }
+        document.getElementById('join-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const firstName = document.getElementById('first-name').value;
+            const lastName = document.getElementById('last-name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const reason = document.getElementById('reason').value;
+            const contribution = document.getElementById('contribution').value;
+            const suggestions = document.getElementById('suggestions').value;
+            const education = document.getElementById('education').value;
+
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username: "nextwavecodeacademy@gmail.com",
+                Password : "742AA48283B4CE332BFB9045779953073D85", // Replace with your secure token from smtpjs.com
+                To: 'adityaj0714@gmail.com',
+                From: "your-adityaj0714@gmail.comemail@example.com", // Replace with your "from" email address
+                Subject: "New Join Us Form Submission",
+                Body: `
+                    <strong>First Name:</strong> ${firstName}<br>
+                    <strong>Last Name:</strong> ${lastName}<br>
+                    <strong>Email:</strong> ${email}<br>
+                    <strong>Phone:</strong> ${phone}<br>
+                    <strong>Reason:</strong> ${reason}<br>
+                    <strong>Contribution:</strong> ${contribution}<br>
+                    <strong>Suggestions:</strong> ${suggestions}<br>
+                    <strong>Education:</strong> ${education}
+                `
+            }).then(message => alert('Form submitted successfully!'));
+
+            // Reset the form after submission
+            document.getElementById('join-form').reset();
+        });
     </script>
 </body>
 </html>
