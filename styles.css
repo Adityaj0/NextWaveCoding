@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
+    background: linear-gradient(45deg, #000, #0066ff, #000);
+    background-size: 400% 400%;
+    animation: waveAnimation 20s ease infinite;
+}
+
+header {
+    background-color: #000;
+    padding: -5px 40px;
+    text-align: center;
+    animation: wave 5s infinite alternate;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #0066ff;
+    position: relative;
+    height: 200px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 100px;
+    background: url('wave.svg') repeat-x;
+    background-size: 50%;
+    animation: waveAnimation 10s linear infinite;
+}
+
+nav {
+    background-color: #000;
+    overflow: hidden;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #0066ff;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+section {
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.8); /* Modified for slight transparency */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin: 40px 0;
+    animation: fadeIn 1s;
+    font-size: 1.2rem;
+    color: #ddd;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px;
+    max-width: 300px;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0066ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0052cc;
+}
+
+footer {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+@keyframes wave {
+    0% {
+        background: linear-gradient(90deg, #000, #0066ff, #000);
+        background-size: 400% 400%;
+        animation: waveAnimation 10s ease infinite;
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        background: linear-gradient(100deg, #000, #0066ff, #000);
+        background-size: 400% 400%;
+        animation: waveAnimation 10s ease infinite;
+    }
+}
+
+@keyframes waveAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.name-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Space between first name and last name inputs */
+    margin-left: -40px; /* Move name container to the left */
+}
+
+
+input,
+textarea {
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: none;
+    background: rgba(255, 255, 255, 0.8); /* Making inputs slightly transparent */
+    color: #000; /* Changing input text color for readability */
+}
+
+textarea {
+    height: 120px; /* Increased height for text areas */
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #0052cc;
+}
+/* Targeting only the 'Join Us' section for specific styling */
+#join-us {
+    padding: 50px; /* Increased padding for more internal spacing */
+    margin: 50px auto; /* Center and add vertical spacing */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: slightly more transparency */
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
+}
+
+/* Spacing for paragraphs within 'Join Us' section */
+#join-us p {
+    margin-bottom: 20px; /* Increase space between paragraphs */
+    line-height: 1.6; /* Improve readability with increased line height */
+}
+
+/* Adjusting form element spacing specifically in 'Join Us' section */
+#join-us form {
+    max-width: 500px; /* Adjust width as necessary */
+    margin: 20px auto; /* More vertical spacing and center alignment */
+}
+
+/* Spacing for labels and inputs within the form */
+#join-us label {
+    display: block;
+    margin-top: 10px; /* Space above each label */
+    margin-bottom: 5px; /* Space below each label before input */
+}
+
+#join-us input[type="text"],
+#join-us input[type="email"],
+#join-us input[type="tel"],
+#join-us textarea {
+    padding: 10px; /* More padding inside input and textarea fields */
+    margin-bottom: 15px; /* More space between form fields */
+    width: 100%; /* Ensure full width to utilize space */
+    border: 1px solid #ffffff50; /* Optional: add subtle border for better visibility */
+}
+
+/* Adjustments to the .name-container within the 'Join Us' section for better layout */
+#join-us .name-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px; /* Increase gap between first name and last name inputs */
+    margin-bottom: 20px; /* Add bottom margin for spacing from next field */
+}
+
+/* Styling adjustments for the submit button */
+#join-us button[type="submit"] {
+    padding: 12px 20px; /* Larger button for easier interaction */
+    background-color: #0066ff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#join-us button[type="submit"]:hover {
+    background-color: #0052cc; /* Darker on hover for better user feedback */
+}
