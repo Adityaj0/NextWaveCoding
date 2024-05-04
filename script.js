@@ -1,4 +1,4 @@
-const scriptURL = 'https://script.google.com/macros/s/YOUR_GOOGLE_APPS_SCRIPT_URL/exec';
+const scriptURL = 'https://script.google.com/macros/s/AKfycbz4I0guMeOH3endReMCqOjvNcGJPdJzPfM34OtZoVIXm-Hdy-SbCSTIjhLX3kggwyc_lA/exec';
 
 $('#join-form').on('submit', function(e) {
 	e.preventDefault();
