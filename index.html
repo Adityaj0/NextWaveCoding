@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextWave Coding</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 <body>
     <header>
@@ -34,33 +33,36 @@
         <section id="join-us">
             <h2>Join Us</h2>
             <p>Interested in learning to code or supporting our cause? Join us today!</p>
-            <form id="join-form">
+            <form id="join-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="apikey" value="580566b0-77c1-4477-8968-dc91efdd492b">
+                <input type="hidden" name="subject" value="Join Us Form Submission">
+                
                 <div class="name-container">
                     <label for="first-name">First Name:</label>
                     <input type="text" id="first-name" name="first-name" placeholder="John" required>
-    
+        
                     <label for="last-name">Last Name:</label>
                     <input type="text" id="last-name" name="last-name" placeholder="Doe" required>
                 </div>
-    
+        
                 <label for="email">Email:</label>
                 <input type="email" id="email" name="email" placeholder="example@domain.com" required>
-    
+        
                 <label for="phone">Phone Number:</label>
                 <input type="tel" id="phone" name="phone" placeholder="+1234567890">
-    
+        
                 <label for="reason">Why do you want to join?</label>
                 <textarea id="reason" name="reason" required placeholder="Your motivation..."></textarea>
-    
+        
                 <label for="contribution">How could you contribute?</label>
                 <textarea id="contribution" name="contribution" placeholder="Your potential contributions..."></textarea>
-    
+        
                 <label for="suggestions">Any suggestions?</label>
                 <textarea id="suggestions" name="suggestions" placeholder="Your suggestions..."></textarea>
-    
+        
                 <label for="education">Current Education:</label>
                 <input type="text" id="education" name="education" placeholder="Current or highest degree">
-    
+        
                 <button type="submit">Submit</button>
             </form>
         </section>
