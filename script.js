@@ -15,7 +15,7 @@ document.getElementById('join-form').addEventListener('submit', function(e) {
         Username: "nextwavecodeacademy@gmail.com",
         Password : "742AA48283B4CE332BFB9045779953073D85", // Replace with your secure token from smtpjs.com
         To: 'adityaj0714@gmail.com',
-        From: "your-adityaj0714@gmail.comemail@example.com", // Replace with your "from" email address
+        From: "adityaj0714@gmail.com", // Replace with your "from" email address
         Subject: "New Join Us Form Submission",
         Body: `
             <strong>First Name:</strong> ${firstName}<br>
