@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextWave Coding</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/move.js/0.8.10/move.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="animations.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
@@ -17,6 +21,7 @@
         <a href="#join-us">Join Us</a>
         <a href="#team">Our Team</a>
         <a href="#contact">Contact Us</a>
+        <a href="#blog">Blog</a>
     </nav>
 
     <main>
@@ -93,6 +98,28 @@
             <p>If you have any questions or need further information, please contact us at:</p>
             <a href="mailto:nextwavecodeacademy@gmail.com">nextwavecodeacademy@gmail.com</a>
         </section>
+
+        <section id="blog">
+            <h2>Blog</h2>
+            <div id="blog-posts">
+                <div class="blog-post-summary">
+                    <h3>AI and ML: The Future of Technology</h3>
+                    <p>Written by Aditya Jain on June 15, 2024</p>
+                    <p class="blog-post-preview">In this blog post, we explore the exciting world of AI and ML, and how these cutting-edge technologies are shaping our future...</p>
+                    <button class="read-more-btn">Read More</button>
+                    <div class="blog-post-content" style="display: none;">
+                        <p>Artificial Intelligence (AI) and Machine Learning (ML) are rapidly transforming the way we interact with technology and solving complex problems. These advanced technologies have the potential to revolutionize various industries, from healthcare and finance to transportation and entertainment.</p>
+                        <p>AI refers to the development of intelligent machines that can perform tasks that typically require human intelligence, such as visual perception, speech recognition, decision-making, and language translation. ML, on the other hand, is a subset of AI that enables systems to learn from data and improve their performance without being explicitly programmed.</p>
+                        <p>One of the most exciting applications of AI and ML is in the field of healthcare. AI-powered systems can assist in early disease detection, drug discovery, and personalized treatment plans. By analyzing vast amounts of medical data, these systems can identify patterns and provide insights that would be difficult for human doctors to discern.</p>
+                        <p>In the realm of finance, AI and ML are revolutionizing areas such as fraud detection, risk management, and algorithmic trading. Sophisticated algorithms can process large volumes of financial data, identify anomalies, and make intelligent decisions in real-time, giving companies a competitive edge.</p>
+                        <p>The transportation industry is also benefiting from AI and ML technologies. Self-driving cars, powered by advanced computer vision and decision-making algorithms, promise to increase road safety and reduce traffic congestion. Additionally, AI-powered predictive maintenance systems can optimize fleet management and minimize downtime.</p>
+                        <p>As AI and ML continue to evolve, we can expect to see even more innovative applications across various industries. However, it is important to address ethical concerns, such as data privacy, algorithmic bias, and the potential impact on employment. By embracing these technologies responsibly and with a human-centric approach, we can unlock their full potential and create a better, more efficient, and more sustainable future.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="animation-container"></div>
     </main>
     <footer>
         <p>&copy; 2023 NextWave Coding</p>

@@ -32,3 +32,16 @@ document.getElementById('join-form').addEventListener('submit', function(e) {
     // Reset the form after submission
     document.getElementById('join-form').reset();
 });
+
+// Blog post read more/less functionality
+const readMoreBtns = document.querySelectorAll('.read-more-btn');
+
+readMoreBtns.forEach(btn => {
+    btn.addEventListener('click', function() {
+        const blogPostContent = this.parentNode.querySelector('.blog-post-content');
+        const isVisible = blogPostContent.style.display === 'none';
+
+        blogPostContent.style.display = isVisible ? 'block' : 'none';
+        this.textContent = isVisible ? 'Read Less' : 'Read More';
+    });
+});

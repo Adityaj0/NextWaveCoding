@@ -65,7 +65,7 @@ main {
 
 section {
     padding: 40px;
-    background-color: rgba(0, 0, 0, 0.8); /* Modified for slight transparency */
+    background-color: rgba(0, 0, 0, 0.8);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     margin: 40px 0;
     animation: fadeIn 1s;
@@ -164,10 +164,9 @@ form {
 .name-container {
     display: flex;
     justify-content: space-between;
-    gap: 10px; /* Space between first name and last name inputs */
-    margin-left: -30px; /* Move name container to the left */
+    gap: 10px;
+    margin-left: -30px;
 }
-
 
 input,
 textarea {
@@ -175,12 +174,12 @@ textarea {
     margin-bottom: 10px;
     border-radius: 5px;
     border: none;
-    background: rgba(255, 255, 255, 0.8); /* Making inputs slightly transparent */
-    color: #000; /* Changing input text color for readability */
+    background: rgba(255, 255, 255, 0.8);
+    color: #000;
 }
 
 textarea {
-    height: 120px; /* Increased height for text areas */
+    height: 120px;
 }
 
 button[type="submit"] {
@@ -196,55 +195,50 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #0052cc;
 }
-/* Targeting only the 'Join Us' section for specific styling */
+
 #join-us {
-    padding: 50px; /* Increased padding for more internal spacing */
-    margin: 50px auto; /* Center and add vertical spacing */
-    background-color: rgba(0, 0, 0, 0.7); /* Optional: slightly more transparency */
+    padding: 50px;
+    margin: 50px auto;
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 20px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.15);
 }
 
-/* Spacing for paragraphs within 'Join Us' section */
 #join-us p {
-    margin-bottom: 20px; /* Increase space between paragraphs */
-    line-height: 1.6; /* Improve readability with increased line height */
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
-/* Adjusting form element spacing specifically in 'Join Us' section */
 #join-us form {
-    max-width: 500px; /* Adjust width as necessary */
-    margin: 20px auto; /* More vertical spacing and center alignment */
+    max-width: 500px;
+    margin: 20px auto;
 }
 
-/* Spacing for labels and inputs within the form */
 #join-us label {
     display: block;
-    margin-top: 10px; /* Space above each label */
-    margin-bottom: 5px; /* Space below each label before input */
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 #join-us input[type="text"],
 #join-us input[type="email"],
 #join-us input[type="tel"],
 #join-us textarea {
-    padding: 10px; /* More padding inside input and textarea fields */
-    margin-bottom: 15px; /* More space between form fields */
-    width: 100%; /* Ensure full width to utilize space */
-    border: 1px solid #ffffff50; /* Optional: add subtle border for better visibility */
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid #ffffff50;
 }
 
-/* Adjustments to the .name-container within the 'Join Us' section for better layout */
 #join-us .name-container {
     display: flex;
     justify-content: space-between;
-    gap: 15px; /* Increase gap between first name and last name inputs */
-    margin-bottom: 20px; /* Add bottom margin for spacing from next field */
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
-/* Styling adjustments for the submit button */
 #join-us button[type="submit"] {
-    padding: 12px 20px; /* Larger button for easier interaction */
+    padding: 12px 20px;
     background-color: #0066ff;
     color: #fff;
     border-radius: 5px;
@@ -253,5 +247,41 @@ button[type="submit"]:hover {
 }
 
 #join-us button[type="submit"]:hover {
-    background-color: #0052cc; /* Darker on hovefor better ufeedback */
+    background-color: #0052cc;
+}
+
+.blog-post-summary {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    margin-bottom: 20px;
+}
+
+.blog-post-summary h3 {
+    margin-top: 0;
+}
+
+.blog-post-preview {
+    margin-bottom: 10px;
+}
+
+.read-more-btn {
+    background-color: #0066ff;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #0052cc;
+}
+
+#animation-container {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto;
 }
